@@ -1,3 +1,25 @@
+"""
+List of Basic.py
+    Sector Basic Draw:
+    1 Point
+    2 Points
+    3 Line
+    4 Lines
+    5 Line_Strip
+    6 Polygon_outline
+    7 Polygon_filled
+    8 Images_spirte
+    9
+    10
+    11
+    12
+    13
+    14
+    15
+    16
+"""
+
+
 import arcade
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
@@ -71,6 +93,15 @@ list_of_poloygon_filled = ((320,SCREEN_HEIGHT-185),
                             (310,SCREEN_HEIGHT-190))
 #arcade.draw_polygon_filled(list,color)
 arcade.draw_polygon_filled(list_of_poloygon_filled,arcade.color.ONYX)
+
+arcade.draw_text('draw_image',475,SCREEN_HEIGHT-280,arcade.color.BLACK,12)
+texture_sprite = arcade.load_texture('Images/block.png')
+scale = 1.5;
+#arcade.draw_texture_rectangle(centerx,centery,width,height,texture,angle)
+arcade.draw_texture_rectangle(525,SCREEN_HEIGHT-240,texture_sprite.width,texture_sprite.height,texture_sprite,0)
+
+arcade.draw_texture_rectangle(525,SCREEN_HEIGHT-200,texture_sprite.width,texture_sprite.height,texture_sprite,45)
+
 
 
 #####
