@@ -53,6 +53,26 @@ list_of_strip = ((20,SCREEN_HEIGHT-185),(20,SCREEN_HEIGHT-250),
 #arcade.draw_line_strip(tuple(x,y),color,size)
 arcade.draw_line_strip(list_of_strip,arcade.color.FOREST_GREEN,2)
 
+arcade.draw_text('draw_line_polygon',155,SCREEN_HEIGHT-260,arcade.color.BLACK,12)
+arcade.draw_text('outline',200,SCREEN_HEIGHT-285,arcade.color.BLACK,12)
+list_of_poloygon_outline = ((170,SCREEN_HEIGHT-185),
+                            (280,SCREEN_HEIGHT-200),
+                            (200,SCREEN_HEIGHT-230),
+                            (160,SCREEN_HEIGHT-190))
+#aracde.draw_polygon_outline(tuple(x,y),color,size)
+arcade.draw_polygon_outline(list_of_poloygon_outline,arcade.color.AIR_FORCE_BLUE,2)
+
+arcade.draw_text('draw_line_polygon',305,SCREEN_HEIGHT-260,arcade.color.BLACK,12)
+arcade.draw_text('filled',350,SCREEN_HEIGHT-285,arcade.color.BLACK,12)
+
+list_of_poloygon_filled = ((320,SCREEN_HEIGHT-185),
+                            (430,SCREEN_HEIGHT-200),
+                            (350,SCREEN_HEIGHT-230),
+                            (310,SCREEN_HEIGHT-190))
+#arcade.draw_polygon_filled(list,color)
+arcade.draw_polygon_filled(list_of_poloygon_filled,arcade.color.ONYX)
+
+
 #####
 arcade.finish_render()
 #keep open
