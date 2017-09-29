@@ -42,6 +42,16 @@ list_of_lines = ((480,SCREEN_HEIGHT-35),(480,SCREEN_HEIGHT-100),
 #arcade.draw_lines(listoflines,color,size)
 arcade.draw_lines(list_of_lines,arcade.color.WOOD_BROWN,2)
 
+arcade.draw_text('draw_line_strip',20,SCREEN_HEIGHT-285,arcade.color.BLACK,12)
+list_of_strip = ((20,SCREEN_HEIGHT-185),(20,SCREEN_HEIGHT-250),
+                 (40,SCREEN_HEIGHT-185),(40,SCREEN_HEIGHT-250),
+                 (60,SCREEN_HEIGHT-185),(60,SCREEN_HEIGHT-250),
+                 (80,SCREEN_HEIGHT-185),(80,SCREEN_HEIGHT-250),
+                 (100,SCREEN_HEIGHT-185),(100,SCREEN_HEIGHT-250),
+                 (120,SCREEN_HEIGHT-185),(120,SCREEN_HEIGHT-250))
+
+#arcade.draw_line_strip(tuple(x,y),color,size)
+arcade.draw_line_strip(list_of_strip,arcade.color.FOREST_GREEN,2)
 
 #####
 arcade.finish_render()
