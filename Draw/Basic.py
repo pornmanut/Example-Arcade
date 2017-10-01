@@ -24,7 +24,6 @@ import arcade
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
 
-
 arcade.open_window(SCREEN_WIDTH,SCREEN_HEIGHT,'Basic')
 arcade.set_background_color(arcade.color.WHEAT)
 arcade.start_render()
