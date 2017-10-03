@@ -1,8 +1,8 @@
 import arcade
 from random import randint
 from random import choice
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1600
+SCREEN_HEIGHT = 800
 
 
 def draw_background():
@@ -37,7 +37,7 @@ def main():
     arcade.set_background_color(arcade.color.WHITE)
     arcade.start_render()
     draw_background()
-    create_tree(0,0,SCREEN_WIDTH,SCREEN_HEIGHT/2,20)
+    create_tree(0,0,SCREEN_WIDTH,SCREEN_HEIGHT/2,50)
     create_brids(0,SCREEN_HEIGHT/2,SCREEN_WIDTH,SCREEN_HEIGHT,20)
 
 
