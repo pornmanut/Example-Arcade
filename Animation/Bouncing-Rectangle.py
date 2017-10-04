@@ -14,6 +14,7 @@ class Windows:
     delta_y = 130
     def on_draw(delta_time):
         arcade.start_render()
+        print(delta_time)
         arcade.draw_rectangle_filled(Windows.center_x,Windows.center_y,RECT_WIDTH,RECT_HEIGHT,arcade.color.RED_DEVIL)
         Windows.center_x += Windows.delta_x*delta_time
         Windows.center_y += Windows.delta_y*delta_time
