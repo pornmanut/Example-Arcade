@@ -4,6 +4,8 @@ import random
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 600
 
+
+
 class Ball():
     def __init__(self,x,y,size,color):
         self.x = x
@@ -18,8 +20,11 @@ class Ball():
         size = random.randrange(10,30)
         x = random.randrange(size,SCREEN_WIDTH-size)
         y = random.randrange(size,SCREEN_HEIGHT-size)
-        change_x = random.randrange(-2,3)
-        change_y = random.randrange(-2,3)
+        change_x = 0
+        change_y = 0
+        while(change_x == 0 and change_y == 0):
+            change_x = random.randrange(-2,3)
+            change_y = random.randrange(-2,3)
         color = (random.randrange(256),random.randrange(256),random.randrange(256))
         ball = Ball(x,y,size,color)
         ball.change_x = change_x
@@ -47,6 +52,9 @@ class Windows(arcade.Window):
                 ball.change_x *= -1
             if (ball.y < ball.size or ball.y > SCREEN_WIDTH - ball.size):
                 ball.change_y *= -1
+
+    def on_mouse_press(self,x,y,button,modifiers):
+        self.ball_list.append(Ball.create_ball()        )
 
 def main():
     Windows(SCREEN_WIDTH,SCREEN_HEIGHT)
